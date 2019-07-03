@@ -1,5 +1,7 @@
 FROM selenium/hub:3.141.59-radium
 
+COPY apt.conf /etc/apt/apt.conf
+
 RUN sudo apt-get update
 RUN sudo apt-get install -y python-pip
 RUN pip install robotframework-seleniumlibrary
